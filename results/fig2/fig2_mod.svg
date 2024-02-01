@@ -5,7 +5,7 @@
    viewBox="0 0 1288.2619 512.83844"
    version="1.1"
    id="svg3306"
-   sodipodi:docname="gmp_fig_unquantised.svg"
+   sodipodi:docname="fig2_mod.svg"
    inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
    xml:space="preserve"
    inkscape:export-filename="gmp_fig.png"
@@ -29,9 +29,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="pt"
      showgrid="false"
-     inkscape:zoom="1.7430461"
-     inkscape:cx="1362.2703"
-     inkscape:cy="586.90358"
+     inkscape:zoom="0.30812993"
+     inkscape:cx="361.86034"
+     inkscape:cy="626.35915"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="3832"
@@ -11062,7 +11062,14 @@
          transform="scale(0.7)"
          d="M -2,-4 9,0 -2,4 c 2,-2.33 2,-5.66 0,-8 z"
          style="fill:context-stroke;fill-rule:evenodd;stroke:none"
-         id="arrow2L-6" /></marker></defs><g
+         id="arrow2L-6" /></marker></defs><rect
+     style="fill:#ffffff;stroke:#ffffff;stroke-width:0.541768;paint-order:stroke markers fill"
+     id="rect6084"
+     width="1290.3441"
+     height="513.88599"
+     x="0.00017526539"
+     y="-0.3040795"
+     ry="0" /><g
      id="patch_12"
      transform="translate(-103.39525,16.228552)"><path
        clip-path="url(#pf021efb145)"

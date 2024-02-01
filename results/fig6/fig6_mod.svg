@@ -26,12 +26,12 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="pt"
      showgrid="false"
-     inkscape:zoom="0.43090986"
-     inkscape:cx="-77.742477"
-     inkscape:cy="612.65713"
+     inkscape:zoom="0.86181972"
+     inkscape:cx="557.5412"
+     inkscape:cy="149.68328"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
-     inkscape:window-x="1912"
+     inkscape:window-x="3832"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg62" />
@@ -691,6 +691,13 @@
          id="rect10349" />
     </clipPath>
   </defs>
+  <rect
+     style="fill:#ffffff;stroke:#ffffff;stroke-width:0.541417;paint-order:stroke markers fill"
+     id="rect752"
+     width="827.60925"
+     height="841.53326"
+     x="-0.87025154"
+     y="-0.87025154" />
   <g
      id="figure_1-7"
      style="stroke-linecap:butt;stroke-linejoin:round"

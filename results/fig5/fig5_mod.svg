@@ -7,6 +7,9 @@
    id="svg77"
    sodipodi:docname="fig5_mod.svg"
    inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   inkscape:export-filename="fig5_mod.png"
+   inkscape:export-xdpi="200"
+   inkscape:export-ydpi="200"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -26,9 +29,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="pt"
      showgrid="false"
-     inkscape:zoom="0.86181969"
-     inkscape:cx="724.62953"
-     inkscape:cy="425.84313"
+     inkscape:zoom="0.60939855"
+     inkscape:cx="606.33554"
+     inkscape:cy="472.59712"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="3832"
@@ -748,6 +751,13 @@
          id="rect1200" />
     </clipPath>
   </defs>
+  <rect
+     style="fill:#ffffff;stroke:#ffffff;stroke-width:0.538852;paint-order:stroke markers fill"
+     id="rect926"
+     width="1020.2708"
+     height="833.20111"
+     x="-0.00128251"
+     y="1.229439" />
   <g
      id="g3778"
      transform="matrix(0.98043828,0,0,0.98043828,-571.03438,-142.83434)">
