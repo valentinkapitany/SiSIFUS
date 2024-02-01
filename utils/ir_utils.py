@@ -75,8 +75,10 @@ class SiSIFUS(object):
         else:
             self.hr_int_mask = np.ones_like(hr_int)
         if tau_limits is not None: 
-            assert(len(tau_limits)==2),'Expect tau_limits to be a tuple/list of floats/ints'
+            assert(len(tau_limits)==2),'Expect tau_limits to be a tuple of floats/ints'
             self.tau_limits = tau_limits
+        elif tau_limits is None: 
+            self.tau_limits = (np.min(lr_tau),np.max(lr_tau))
         self.lr_tau = lr_tau.astype('float64')
         self.hr_int = hr_int.astype('float64')
         self.upsampling_factor = (int(hr_int.shape[0]/lr_tau.shape[0]),int(hr_int.shape[1]/lr_tau.shape[1])) #y,x
@@ -169,18 +171,17 @@ class SiSIFUS(object):
         zv = np.stack([xv, yv]).transpose(1, 2, 0)
         zv_windows = view_as_windows(zv, window_shape=(patch_size[0], patch_size[1], 1), step=1)
         window_centers = zv_windows[:, :, :, int(patch_size[0] / 2), int(patch_size[1] / 2), 0]  # Center positions of the windows
-        flim_samples = zv[::self.upsampling_factor[0], ::self.upsampling_factor[1]]  # Indices of the flim samples
-
+        indices = zv[::self.upsampling_factor[0], ::self.upsampling_factor[1]]  # Indices of the flim samples
         if pad > 1:
             # Apply padding around each flim sample for window selection
-            padded_samples = np.zeros(np.append(flim_samples.shape, (pad, pad)))
+            padded_samples = np.zeros(np.append(indices.shape, (pad, pad)))
             for i in range(pad):
                 for j in range(pad):
-                    padded_samples[:, :, 0, j, i] = flim_samples[:, :, 0] + i - int(np.floor(pad / 2))
-                    padded_samples[:, :, 1, j, i] = flim_samples[:, :, 1] + j - int(np.floor(pad / 2))
-            flim_samples = padded_samples.transpose(0, 3, 1, 4, 2).reshape(flim_samples.shape[0] * pad, flim_samples.shape[1] * pad, 2)
+                    padded_samples[:, :, 0, j, i] = indices[:, :, 0] + i - int(np.floor(pad / 2))
+                    padded_samples[:, :, 1, j, i] = indices[:, :, 1] + j - int(np.floor(pad / 2))
+            indices = padded_samples.transpose(0, 3, 1, 4, 2).reshape(indices.shape[0] * pad, indices.shape[1] * pad, 2)
 
-        comp_samples = flim_samples[:, :, 0] + 1j * flim_samples[:, :, 1]
+        comp_samples = indices[:, :, 0] + 1j * indices[:, :, 1]
         comp_centers = window_centers[:, :, 0] + 1j * window_centers[:, :, 1]
         valid_flim_samples = np.isin(comp_samples, comp_centers)
         valid_lr_windows = np.isin(comp_centers, comp_samples)

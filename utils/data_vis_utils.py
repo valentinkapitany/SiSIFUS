@@ -2,7 +2,7 @@ from matplotlib.colors import Normalize
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.widgets import Slider, RadioButtons
-
+import matplotlib.patches as patches
 
 my_vis_dict = {
     "text.usetex": False,
@@ -23,27 +23,60 @@ my_vis_dict = {
     'svg.fonttype' : 'none'
 }
 
-def vis_windows(name):
+def vis_params(name):
+    """
+    Retrieve visualization windows and region of interest parameters based on the provided name.
+
+    Parameters:
+    - name (str): The name of the visualization window configuration.
+
+    Returns:
+    - vis_windows (list of list): List of window coordinates for visualization.
+    - roi_co (list): Coordinates of the region of interest.
+    - roi_s (int): Size of the region of interest.
+
+    Note:
+    - For TRIMSCOPE_Rac_Raichu:
+        - Visualization windows are downsampled by 16x16.
+        - ROI coordinates: [75, 120]
+        - ROI size: 25
+    - For Flimera_Convallaria_Acridine_Orange:
+        - Visualization windows are downsampled by 8x8.
+        - ROI coordinates: [80, 50]
+        - ROI size: 30
+    - For Flimera_Rac_Raichu:
+        - Visualization windows are downsampled by 8x8.
+        - ROI coordinates: [150, 30]
+        - ROI size: 20
+    - For TRIMSCOPE_FLIPPER_2:
+        - Visualization windows are downsampled by 16x16.
+        - ROI coordinates: [190, 260]
+        - ROI size: 50
+    """
 
     if name=='TRIMSCOPE_Rac_Raichu':
-        #downsampling 16x16
-        vis_windows = [[2,7], [5,12], [5,4]]  
+        vis_windows = [[2,7], [5,4]]  
+        roi_co = [75, 120]
+        roi_s = 25
 
     if name=='Flimera_Convallaria_Acridine_Orange':
-        #downsampling 8x8
-        vis_windows =  None
-        vis_windows = [[6,0], [7, 4], [21, 1]] 
+        vis_windows = [[7, 4], [21, 1]] 
+        roi_co = [80, 50]
+        roi_s = 30
 
     if name=='Flimera_Rac_Raichu':
-        #downsampling 8x8
-        vis_windows = [[7, 3], [4, 16], [10, 1]] 
+        vis_windows = [[7, 3], [4, 16]] 
+        roi_co = [150, 30] 
+        roi_s = 20
 
     if name=='TRIMSCOPE_FLIPPER_2':
-        #downsampling 16x16
-        """Top left = (16,16). Downsampling factor (16x16). Window centres in original coords (x,y): (384, 208) - 1.5ns, (160, 112) - 2.3ns, (336,80) - 3ns"""
-        vis_windows = [[21, 6], [14, 6], [20, 4]]
+        """Top left = (16,16). Downsampling factor (16x16). Assumes pad = 1"""
+        vis_windows = [[21, 6], [20, 4]]
+        roi_co = [190, 260]
+        roi_s = 50      
+        
 
-    return vis_windows
+    return vis_windows, roi_co, roi_s
 
 def intensity_weighting(colors, weighting, limits, cmap, intensfactor):
     colors = Normalize(limits[0],limits[1], clip=True)(colors)
@@ -118,3 +151,54 @@ def two_image_slider(image_options,image1_key,image2_key):
     radio2.on_clicked(on_radio2_clicked)
     
     return locals()
+
+def show_local_patches(sisifus,data_str,tau_limits):
+    sisifus.data_clean()
+    lr_tau_winds, lr_int_winds = sisifus.local_data_prep()
+    vis_windows,  _, _ = vis_params(data_str)
+
+    wsv = 6
+    fig, ax = plt.subplots(2,1, sharex=True, figsize=(1,2),dpi=100)
+
+    fig.subplots_adjust(0,0,1,1,0,0.05)
+
+    y = lr_tau_winds[vis_windows[0][1]+1,vis_windows[0][0]+1]
+    lr_tau_winds[lr_tau_winds<tau_limits[0]] = tau_limits[0]
+    lr_tau_winds[lr_tau_winds>tau_limits[1]] = tau_limits[1]
+    ylim = [np.min((np.min(lr_tau_winds[vis_windows[0][1]+1,vis_windows[0][0]+1]),np.min(lr_tau_winds[vis_windows[1][1]+1,vis_windows[1][0]+1])))-2e-2,
+            np.max((np.max(lr_tau_winds[vis_windows[0][1]+1,vis_windows[0][0]+1]),np.max(lr_tau_winds[vis_windows[1][1]+1,vis_windows[1][0]+1])))+2e-2]
+    ax[0].scatter(lr_int_winds[vis_windows[0][1]+1,vis_windows[0][0]+1], y)
+    ax[0].set_ylim(ylim)
+    ax[0].grid(axis='y')
+    ax[0].xaxis.set_major_locator(plt.MaxNLocator(2))
+
+    y = lr_tau_winds[vis_windows[1][1]+1,vis_windows[1][0]+1]
+    y[y>3.5] =3.5
+    ax[1].scatter(lr_int_winds[vis_windows[1][1]+1,vis_windows[1][0]+1], y)
+    ax[1].set_xlabel('counts',labelpad=-5)
+    ax[1].set_ylim(ylim)
+    ax[1].xaxis.set_major_locator(plt.MaxNLocator(2))
+    ax[1].grid(axis='y')
+    ax[1].set_ylabel('lifetime (ns)')
+
+    plt.setp(ax[1].get_xticklabels(), rotation=20)
+    plt.show(block=False)
+    plt.pause(0.01)
+
+def show_global_patches(sisifus,data_str):
+    sisifus.data_clean()
+    lr_int_patches, lr_tau_centres, _ = sisifus.global_data_prep(pad=1)
+
+    vis_windows,_,_ = vis_params(data_str)
+    vis_windows = vis_windows
+
+    wsv = 6
+    fig, ax = plt.subplots(2,1, sharex=True, figsize=(1,2),dpi=100)
+    ax[0].imshow(lr_int_patches[vis_windows[0][1],vis_windows[0][0]],cmap='gray')
+    ax[0].axis('off')
+    ax[0].scatter(wsv,wsv,c=lr_tau_centres[vis_windows[0][1],vis_windows[0][0]],vmin=sisifus.tau_limits[0],vmax=sisifus.tau_limits[1],cmap='jet')
+    ax[1].imshow(lr_int_patches[vis_windows[1][1],vis_windows[1][0]],cmap='gray')
+    ax[1].axis('off')
+    ax[1].scatter(wsv,wsv,c=lr_tau_centres[vis_windows[1][1],vis_windows[1][0]],vmin=sisifus.tau_limits[0],vmax=sisifus.tau_limits[1],cmap='jet')
+    plt.show(block=False)
+    plt.pause(0.01)
