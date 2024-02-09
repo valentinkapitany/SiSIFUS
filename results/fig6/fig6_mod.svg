@@ -7,6 +7,9 @@
    id="svg62"
    sodipodi:docname="fig6_mod.svg"
    inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   inkscape:export-filename="fig6_mod.png"
+   inkscape:export-xdpi="200"
+   inkscape:export-ydpi="200"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -26,9 +29,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="pt"
      showgrid="false"
-     inkscape:zoom="0.86181972"
-     inkscape:cx="557.5412"
-     inkscape:cy="149.68328"
+     inkscape:zoom="0.60939857"
+     inkscape:cx="529.2103"
+     inkscape:cy="592.38735"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="3832"
@@ -1671,83 +1674,6 @@
        ry="0"
        transform="rotate(-90)" />
   </g>
-  <text
-     xml:space="preserve"
-     style="font-size:20px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.75"
-     x="-0.8203125"
-     y="22.626543"
-     id="text5167"><tspan
-       sodipodi:role="line"
-       id="tspan5165"
-       x="-0.8203125"
-       y="22.626543"
-       style="stroke-width:0.75">(a)</tspan></text>
-  <text
-     xml:space="preserve"
-     style="font-size:20px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.75"
-     x="2.4771719"
-     y="446.43906"
-     id="text5221"><tspan
-       sodipodi:role="line"
-       id="tspan5219"
-       x="2.4771719"
-       y="446.43906"
-       style="stroke-width:0.75">(e)</tspan></text>
-  <text
-     xml:space="preserve"
-     style="font-size:20px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:round"
-     x="272.29755"
-     y="21.339476"
-     id="text5221-2"><tspan
-       sodipodi:role="line"
-       id="tspan5219-1"
-       x="272.29755"
-       y="21.339476"
-       style="stroke-width:0.75">(b)</tspan></text>
-  <text
-     xml:space="preserve"
-     style="font-size:20px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:round"
-     x="497.21167"
-     y="20.469215"
-     id="text5221-7"><tspan
-       sodipodi:role="line"
-       id="tspan5219-2"
-       x="497.21167"
-       y="20.469215"
-       style="stroke-width:0.75">(c)</tspan></text>
-  <text
-     xml:space="preserve"
-     style="font-size:20px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:round"
-     x="498.95221"
-     y="226.32961"
-     id="text5221-28"><tspan
-       sodipodi:role="line"
-       id="tspan5219-9"
-       x="498.95221"
-       y="226.32961"
-       style="stroke-width:0.75">(d)</tspan></text>
-  <text
-     xml:space="preserve"
-     style="font-size:20px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:round"
-     x="275.77853"
-     y="446.02225"
-     id="text5221-8"><tspan
-       sodipodi:role="line"
-       id="tspan5219-6"
-       x="275.77853"
-       y="446.02225"
-       style="stroke-width:0.75">(f)</tspan></text>
-  <text
-     xml:space="preserve"
-     style="font-size:20px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:round"
-     x="534.63251"
-     y="447.61401"
-     id="text5221-0"><tspan
-       sodipodi:role="line"
-       id="tspan5219-4"
-       x="534.63251"
-       y="447.61401"
-       style="stroke-width:0.75">(g)</tspan></text>
   <rect
      style="fill:#ffffff;stroke:none;stroke-width:0.411464;stroke-linecap:butt;stroke-linejoin:round;paint-order:stroke markers fill"
      id="rect16609-8-7"
@@ -2710,4 +2636,81 @@
        height="239.03999"
        style="stroke-linecap:butt;stroke-linejoin:round" />
   </g>
+  <text
+     xml:space="preserve"
+     style="font-size:20px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.75"
+     x="3.98316"
+     y="20.315624"
+     id="text985"><tspan
+       sodipodi:role="line"
+       id="tspan983"
+       x="3.98316"
+       y="20.315624"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20px;font-family:'Lucida Bright';-inkscape-font-specification:'Lucida Bright';stroke-width:0.75">A</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:20px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:round"
+     x="274.49652"
+     y="19.289576"
+     id="text985-6"><tspan
+       sodipodi:role="line"
+       id="tspan983-4"
+       x="274.49652"
+       y="19.289576"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20px;font-family:'Lucida Bright';-inkscape-font-specification:'Lucida Bright';stroke-width:0.75">B</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:20px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:round"
+     x="514.3725"
+     y="23.289421"
+     id="text985-9"><tspan
+       sodipodi:role="line"
+       id="tspan983-0"
+       x="514.3725"
+       y="23.289421"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20px;font-family:'Lucida Bright';-inkscape-font-specification:'Lucida Bright';stroke-width:0.75">C</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:20px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:round"
+     x="515.1026"
+     y="234.97354"
+     id="text985-3"><tspan
+       sodipodi:role="line"
+       id="tspan983-5"
+       x="515.1026"
+       y="234.97354"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20px;font-family:'Lucida Bright';-inkscape-font-specification:'Lucida Bright';stroke-width:0.75">D</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:20px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:round"
+     x="8.314558"
+     y="445.00406"
+     id="text985-2"><tspan
+       sodipodi:role="line"
+       id="tspan983-1"
+       x="8.314558"
+       y="445.00406"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20px;font-family:'Lucida Bright';-inkscape-font-specification:'Lucida Bright';stroke-width:0.75">E</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:20px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:round"
+     x="278.80405"
+     y="446.65765"
+     id="text985-30"><tspan
+       sodipodi:role="line"
+       id="tspan983-59"
+       x="278.80405"
+       y="446.65765"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20px;font-family:'Lucida Bright';-inkscape-font-specification:'Lucida Bright';stroke-width:0.75">F</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:20px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:round"
+     x="535.02545"
+     y="448.42694"
+     id="text985-27"><tspan
+       sodipodi:role="line"
+       id="tspan983-49"
+       x="535.02545"
+       y="448.42694"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20px;font-family:'Lucida Bright';-inkscape-font-specification:'Lucida Bright';stroke-width:0.75">G</tspan></text>
 </svg>

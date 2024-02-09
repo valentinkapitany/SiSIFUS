@@ -7,6 +7,9 @@
    id="svg699"
    sodipodi:docname="sf3_mod.svg"
    inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   inkscape:export-filename="sf3_mod.png"
+   inkscape:export-xdpi="200"
+   inkscape:export-ydpi="200"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -26,9 +29,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="pt"
      showgrid="false"
-     inkscape:zoom="1.9666667"
-     inkscape:cx="514.32203"
-     inkscape:cy="133.72881"
+     inkscape:zoom="0.98333335"
+     inkscape:cx="565.93219"
+     inkscape:cy="263.38983"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="3832"
@@ -134,12 +137,12 @@
     </marker>
   </defs>
   <rect
-     style="fill:#ffffff;stroke:#ffffff;stroke-width:0.542175;paint-order:stroke markers fill"
+     style="fill:#ffffff;stroke:#ffffff;stroke-width:0.543033;paint-order:stroke markers fill"
      id="rect739"
-     width="861.10095"
-     height="409.19415"
-     x="0.76309073"
-     y="-0.38097703" />
+     width="859.14978"
+     height="411.42239"
+     x="0.76252538"
+     y="0.27052212" />
   <g
      id="axes_1"
      transform="translate(-107.20948,-23.3125)">
