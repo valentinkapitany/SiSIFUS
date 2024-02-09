@@ -88,7 +88,7 @@
 
                     <!-- Supplementary PDF link -->
                     <span class="link-block">
-                      <a href="publication_files/SiSIFUS_revised 2.pdf" target="_blank"
+                      <a href="static/SI.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                         <i class="fas fa-file-pdf"></i>
@@ -127,22 +127,13 @@
 </section>
 
 
-<!-- Teaser video-->
-<section class="hero teaser">
+<section class="main figure">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
+      <img src="static/images/readme_img.svg">
     </div>
   </div>
 </section>
-<!-- End teaser video -->
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -152,7 +143,13 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+           We present single-sample image-fusion upsampling, a training-set-free computational single-image super-resolution method. 
+           
+           Unlike typical example-based super-resolution techniques (such as neighbor embedding or deep learning), our method draws all information from a single measurement; we have no external training set, and thus no external training bias. Nonetheless, our method can draw more information about lifetime than the low-resolution image natively contains by exploiting dependencies between it, and our high-resolution intensity measurement. We differentiate two types of dependency, local and global.
+           
+           Local dependencies, matching regions where lifetime and quantum yield correlate strongly, are found by fitting function on windows of corresponding lifetime and intensity values, whereas global dependencies (between morphology and fluorescence lifetime) are extracted by a deep neural network trained to label intensity patches with the central lifetime measurement of that patch, drawing patches exclusively from the given sample. 
+
+           These physics-based dependencies are used to create local and globals "priors", which constrain a convex optimisation pipeline that upsamples the low-resolution lifetime image.
           </p>
         </div>
       </div>
