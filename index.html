@@ -125,7 +125,7 @@
         type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        Our method creates a prior based on local dependencies between intensity and lifetime, and one based on global dependencies between cellular morphology and lifetime. These priors are used to constrain an alternating direction method of multipliers (ADMM) inverse retrieval scheme, upsampling the image.
+        The SiSIFUS pipeline searches for local and global dependencies between a high-resolution intensity image (grayscale) and a low-resolution fluorescence lifetime image (RGB). These serve as prior knowledge to constrain a inverse retrieval scheme (ADMM), super-resolving the image. Interpolation (e.g. bilinear) methods cannot make use of the high-resolution intensity information as SiSIFUS can, hence they are blurred.
       </h2>
     </div>
   </div>
