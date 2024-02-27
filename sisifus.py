@@ -8,14 +8,31 @@ import tensorflow as tf
 from scipy.io import loadmat, savemat
 from skimage.metrics import structural_similarity as ssim
 import os
-#%% Load data
+import importlib
+importlib.reload(ir_utils)
 
+#%%
+"""
+Using WSL 2, with mamba installed.
+
+Optional (visualisation only) - PyQt5 throws errors without LibGL1, fix with:
+sudo apt-get update && sudo apt-get install libgl1
+
+Required:
+mamba create -n sisifus-tf python=3.11
+mamba activate sisifus-tf
+mamba install numpy matplotlib scikit-image scikit-learn tqdm scipy ipykernel
+pip3 install tensorflow[and-cuda] opencv-python-headless
+pip install lpips
+"""
+#%% Load data
+%matplotlib qt
 # Set constants
 cmap = plt.cm.jet
 epochs = 150
 
 # Load data using data_utils.load function
-data_str = 'TRIMSCOPE_Rac_Raichu' # TRIMSCOPE_FLIPPER_2, Flimera_Convallaria_Acridine_Orange, TRIMSCOPE_Rac_Raichu, Flimera_Rac_Raichu, TRIMSCOPE_FLIPPER <- used only for validation
+data_str = 'TRIMSCOPE_FLIPPER' #TRIMSCOPE_FLIPPER, TRIMSCOPE_FLIPPER_2, Flimera_Convallaria_Acridine_Orange, TRIMSCOPE_Rac_Raichu, Flimera_Rac_Raichu, TRIMSCOPE_FLIPPER <- used only for validation
 hr_int, hr_tau, hr_int_mask, hr_int_enh, tau_limits, intensfactor, intensfactor_A = data_utils.load(data_str)
 
 # Visualize data
@@ -42,10 +59,15 @@ plt.show(block=False)
 plt.pause(0.01)
 
 #%% SiSIFUS pipeline
-
+import importlib
+importlib.reload(ir_utils)
+#%%
+# bilinear = tf.squeeze(tf.compat.v1.image.resize(lr_tau[tf.newaxis,...,tf.newaxis],hr_int.shape,'bilinear',align_corners=False,)).numpy()
+np.save(r'../FLIPPER/hr_tau.npy',hr_tau)
+#%%
 # For validation, we downsample the high-resolution FLIM ground truth image.
 # For testing, load the low-resolution FLIM image directly
-df = 8
+df = 16
 lr_tau = hr_tau[::df, ::df]
 
 # Initialize SiSIFUS object with low-resolution tau and high-resolution intensity data
@@ -60,6 +82,7 @@ sisifus = ir_utils.SiSIFUS(lr_tau, hr_int, tau_limits=tau_limits)
 local_prior = loadmat(os.path.join('data/intermediate', data_str, 'local_prior_upsampling_{}x{}.mat'.format(df,df)))['local_prior']
 global_prior = loadmat(os.path.join('data/intermediate', data_str, 'global_prior_upsampling_{}x{}.mat'.format(df,df)))['tau_mean']
 hr_tau_estimate = loadmat(os.path.join('data/processed','{}_upsampling_{}x{}.mat'.format(data_str,df,df)))['hr_tau_estimate']
+
 #%% Visualise results
 
 colors_hr, _ = data_vis_utils.intensity_weighting(hr_tau, hr_int_enh, tau_limits, cmap, intensfactor_A)

@@ -269,7 +269,7 @@ class SiSIFUS(object):
                     hr_tau_mu[min(lr_int_winds.shape[0]-1,i),min(lr_int_winds.shape[1]-1,j),i_*((self.local_window_size[0]+1)%2+1)+j_] = mu
                 else:
                     hr_tau_mu[x_l:x_h,y_l:y_h] = mu[:].reshape((x_h-x_l,y_h-y_l))
-        
+                
         hr_tau_mu = nan_fill(hr_tau_mu)
         hr_tau_mu = inf_fill(hr_tau_mu)
         
@@ -406,15 +406,38 @@ class SiSIFUS(object):
         encoder = eval('cnn_utils.Architectures(self.global_patch_size).{}()'.format(model_v))
         encoder.compile(loss='mae',
                         optimizer=tf.keras.optimizers.Adam(learning_rate=3e-4))
-        history = encoder.fit(x=x_train, y = y_train, epochs = epochs, shuffle=True, batch_size=100)
+        # history = encoder.fit(x=x_train, y = y_train, epochs = epochs, shuffle=True, batch_size=100)
+        
+        # # Make predictions
+        # prediction = encoder.predict(x_test,batch_size=1000)
+        # prediction = prediction.reshape(hr_int_patches.shape[0],hr_int_patches.shape[1])
+        # prediction[prediction<0] = 0
+
+        # self.global_prior=prediction.copy()
+        # return prediction, history.history
+        
+        run_matrix = np.zeros((512,512,151))
+        class TestCallback(tf.keras.callbacks.Callback):
+            def __init__(self, test_dataset):
+                super().__init__()
+                self.test_dataset = test_dataset
+            def on_epoch_begin(self,epoch,logs=None):
+                prediction = self.model.predict(x_test,batch_size=1000)
+                prediction = prediction.reshape(hr_int_patches.shape[0],hr_int_patches.shape[1])
+                prediction[prediction<0] = 0
+                run_matrix[6:-6,6:-6,epoch]=prediction
+        
+        history = encoder.fit(x=x_train, y = y_train, epochs = epochs, shuffle=True, batch_size=100,callbacks=[TestCallback(x_test)])
         
         # Make predictions
         prediction = encoder.predict(x_test,batch_size=1000)
         prediction = prediction.reshape(hr_int_patches.shape[0],hr_int_patches.shape[1])
         prediction[prediction<0] = 0
-
+    
+        np.save(r'E:\OneDrive - University of Glasgow\mega-FLIM\FLIPPER\gp_frames.npy',run_matrix)
+        
         self.global_prior=prediction.copy()
-        return prediction, history.history
+        return prediction, None#history.history
        
     def admm_loop(self,local_prior,global_prior, ADMM_iter = 20):
         """
@@ -488,8 +511,11 @@ class SiSIFUS(object):
         delta = 0.1
         u  = y/rho
 
+        run_matrix = np.zeros((512,512,20))
+
         # Main ADMM loop
         for iterations in tqdm(range (ADMM_iter),'ADMM'):
+            run_matrix[:,:,iterations] = g0
             u = y/rho
             stp_sz = 1
             p = np.zeros(GD_iter,)
@@ -560,6 +586,9 @@ class SiSIFUS(object):
             y = y+rho*(Forw_Diff(g0)-z)
 
         self.hr_tau_mean_estimate = g0
+
+        np.save(r'E:\OneDrive - University of Glasgow\mega-FLIM\FLIPPER\admm_frames.npy',run_matrix)
+
         return g0
     
     def local_pipeline_segment(self,window_size=(5,5),func_type='linear_interp'):

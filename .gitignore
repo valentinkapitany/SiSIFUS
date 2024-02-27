@@ -1,3 +1,6 @@
 publication_files
 *.png
 SiSIFUS_main_branch_backup.zip
+videos.py
+utils/__pycache__
+results/figs_zipped.zip
