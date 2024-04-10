@@ -35,9 +35,9 @@ def load(name):
         hr_int_mask = np.ones_like(hr_int)
         hr_int_enh = hr_int.copy()
 
-        tau_limits = [0,4]
+        tau_limits = [0,3.5]
         intensfactor = 10
-        intensfactor_A = 10
+        intensfactor_A = 17
 
     if name=='TRIMSCOPE_Rac_Raichu':
         file = loadmat('data/raw/TRIMSCOPE_Rac_Raichu.mat')
@@ -85,7 +85,7 @@ def load(name):
         hr_int_enh = hr_int.copy()
         
         tau_limits = [0,3.5]
-        intensfactor = 10
+        intensfactor = 7
         intensfactor_A = 25
 
     return hr_int, hr_tau, hr_int_mask, hr_int_enh, tau_limits, intensfactor, intensfactor_A

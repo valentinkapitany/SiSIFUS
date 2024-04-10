@@ -30,9 +30,9 @@ pip install lpips
 # Set constants
 cmap = plt.cm.jet
 epochs = 150
-
+importlib.reload(data_utils)
 # Load data using data_utils.load function
-data_str = 'TRIMSCOPE_FLIPPER' #TRIMSCOPE_FLIPPER, TRIMSCOPE_FLIPPER_2, Flimera_Convallaria_Acridine_Orange, TRIMSCOPE_Rac_Raichu, Flimera_Rac_Raichu, TRIMSCOPE_FLIPPER <- used only for validation
+data_str = 'TRIMSCOPE_FLIPPER_2' #TRIMSCOPE_FLIPPER, TRIMSCOPE_FLIPPER_2, Flimera_Convallaria_Acridine_Orange, TRIMSCOPE_Rac_Raichu, Flimera_Rac_Raichu, TRIMSCOPE_FLIPPER <- used only for validation
 hr_int, hr_tau, hr_int_mask, hr_int_enh, tau_limits, intensfactor, intensfactor_A = data_utils.load(data_str)
 
 # Visualize data
@@ -61,10 +61,7 @@ plt.pause(0.01)
 #%% SiSIFUS pipeline
 import importlib
 importlib.reload(ir_utils)
-#%%
-# bilinear = tf.squeeze(tf.compat.v1.image.resize(lr_tau[tf.newaxis,...,tf.newaxis],hr_int.shape,'bilinear',align_corners=False,)).numpy()
-np.save(r'../FLIPPER/hr_tau.npy',hr_tau)
-#%%
+
 # For validation, we downsample the high-resolution FLIM ground truth image.
 # For testing, load the low-resolution FLIM image directly
 df = 16
@@ -74,15 +71,14 @@ lr_tau = hr_tau[::df, ::df]
 sisifus = ir_utils.SiSIFUS(lr_tau, hr_int, tau_limits=tau_limits)
 
 # # # Generate priors and use them to perform ADMM
-# local_prior = sisifus.local_pipeline_segment(window_size=(5,5))
-# global_prior, history = sisifus.global_pipeline_segment(epochs=epochs,patch_size=(13,13))
-# hr_tau_estimate = sisifus.admm_loop(local_prior,global_prior,ADMM_iter = 20)
+local_prior = sisifus.local_pipeline_segment(window_size=(5,5))
+global_prior, history = sisifus.global_pipeline_segment(epochs=epochs,patch_size=(13,13))
+hr_tau_estimate = sisifus.admm_loop(local_prior,global_prior,ADMM_iter = 20)
 
 # # Data can also be loaded in from repositories
-local_prior = loadmat(os.path.join('data/intermediate', data_str, 'local_prior_upsampling_{}x{}.mat'.format(df,df)))['local_prior']
-global_prior = loadmat(os.path.join('data/intermediate', data_str, 'global_prior_upsampling_{}x{}.mat'.format(df,df)))['tau_mean']
-hr_tau_estimate = loadmat(os.path.join('data/processed','{}_upsampling_{}x{}.mat'.format(data_str,df,df)))['hr_tau_estimate']
-
+# local_prior = loadmat(os.path.join('data/intermediate', data_str, 'local_prior_upsampling_{}x{}.mat'.format(df,df)))['local_prior']
+# global_prior = loadmat(os.path.join('data/intermediate', data_str, 'global_prior_upsampling_{}x{}.mat'.format(df,df)))['tau_mean']
+# hr_tau_estimate = loadmat(os.path.join('data/processed','{}_upsampling_{}x{}.mat'.format(data_str,df,df)))['hr_tau_estimate']
 #%% Visualise results
 
 colors_hr, _ = data_vis_utils.intensity_weighting(hr_tau, hr_int_enh, tau_limits, cmap, intensfactor_A)

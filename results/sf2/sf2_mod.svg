@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   width="642.33124pt"
-   height="278.80624pt"
-   viewBox="0 0 642.33125 278.80625"
+   width="490.56876pt"
+   height="279.99124pt"
+   viewBox="0 0 490.56875 279.99125"
    version="1.1"
-   id="svg1051"
-   sodipodi:docname="sf2_mod.svg"
+   id="svg1302"
+   sodipodi:docname="sf1_mod.svg"
    inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
-   inkscape:export-filename="sf2_mod.png"
-   inkscape:export-xdpi="200"
-   inkscape:export-ydpi="200"
+   inkscape:export-filename="sf1_mod.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -19,7 +19,7 @@
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:dc="http://purl.org/dc/elements/1.1/">
   <sodipodi:namedview
-     id="namedview1053"
+     id="namedview1304"
      pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1.0"
@@ -29,22 +29,22 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="pt"
      showgrid="false"
-     inkscape:zoom="0.63484948"
-     inkscape:cx="30.715942"
-     inkscape:cy="185.87083"
+     inkscape:zoom="1.2643253"
+     inkscape:cx="309.65133"
+     inkscape:cy="227.78949"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="3832"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg1051" />
+     inkscape:current-layer="svg1302" />
   <metadata
-     id="metadata819">
+     id="metadata1105">
     <rdf:RDF>
       <cc:Work>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:date>2024-02-01T12:19:15.198825</dc:date>
+        <dc:date>2024-02-01T12:16:19.440701</dc:date>
         <dc:format>image/svg+xml</dc:format>
         <dc:creator>
           <cc:Agent>
@@ -55,16 +55,16 @@
     </rdf:RDF>
   </metadata>
   <defs
-     id="defs823">
+     id="defs1109">
     <style
        type="text/css"
-       id="style821">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+       id="style1107">*{stroke-linejoin: round; stroke-linecap: butt}</style>
   </defs>
   <rect
      style="fill:#ffffff;stroke:#ffffff;stroke-width:0.541417;paint-order:stroke markers fill"
-     id="rect431"
-     width="642.33124"
-     height="278.80624"
+     id="rect469"
+     width="490.56876"
+     height="279.99124"
      x="0"
      y="0" />
   <g
@@ -72,18 +72,18 @@
     <g
        id="patch_1">
       <path
-         d="M 0,278.80625 H 642.33125 V 0 H 0 Z"
+         d="M 0,279.99125 H 490.56875 V 0 H 0 Z"
          style="fill:#ffffff"
-         id="path825" />
+         id="path1111" />
     </g>
     <g
        id="axes_1">
       <g
          id="patch_2">
         <path
-           d="M 97.965625,228.96 H 544.36563 V 7.2 H 97.965625 Z"
+           d="M 67.865625,228.96 H 402.66562 V 7.2 H 67.865625 Z"
            style="fill:#ffffff"
-           id="path828" />
+           id="path1114" />
       </g>
       <g
          id="matplotlib.axis_1">
@@ -92,32 +92,29 @@
           <g
              id="line2d_1">
             <defs
-               id="defs832">
+               id="defs1118">
               <path
-                 id="m01cc84a039"
+                 id="m950798b1b3"
                  d="M 0,0 V -3.5"
                  style="stroke:#000000;stroke-width:0.8" />
             </defs>
             <g
-               id="g836">
+               id="g1122">
               <use
-                 xlink:href="#m01cc84a039"
-                 x="118.25653"
+                 xlink:href="#m950798b1b3"
+                 x="83.083809"
                  y="228.96001"
                  style="stroke:#000000;stroke-width:0.8"
-                 id="use834" />
+                 id="use1120" />
             </g>
           </g>
           <g
              id="text_1">
             <text
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:normal;font-family:'Times New Roman', serif"
-               transform="translate(95.492472,246.3475)"
-               id="text839">linear</text>
-            <text
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:normal;font-family:'Times New Roman', serif"
-               transform="translate(94.369034,267.29062)"
-               id="text841">spline</text>
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:normal;font-family:'Times New Roman', serif;text-anchor:middle"
+               x="83.083809"
+               y="246.3475"
+               id="text1125">2</text>
           </g>
         </g>
         <g
@@ -125,25 +122,22 @@
           <g
              id="line2d_2">
             <g
-               id="g847">
+               id="g1131">
               <use
-                 xlink:href="#m01cc84a039"
-                 x="185.8929"
+                 xlink:href="#m950798b1b3"
+                 x="133.81108"
                  y="228.96001"
                  style="stroke:#000000;stroke-width:0.8"
-                 id="use845" />
+                 id="use1129" />
             </g>
           </g>
           <g
              id="text_2">
             <text
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:normal;font-family:'Times New Roman', serif"
-               transform="translate(166.45383,246.3475)"
-               id="text850">quad</text>
-            <text
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:normal;font-family:'Times New Roman', serif"
-               transform="translate(162.0054,267.29062)"
-               id="text852">spline</text>
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:normal;font-family:'Times New Roman', serif;text-anchor:middle"
+               x="133.81108"
+               y="246.3475"
+               id="text1134">3</text>
           </g>
         </g>
         <g
@@ -151,25 +145,22 @@
           <g
              id="line2d_3">
             <g
-               id="g858">
+               id="g1140">
               <use
-                 xlink:href="#m01cc84a039"
-                 x="253.52927"
+                 xlink:href="#m950798b1b3"
+                 x="184.53835"
                  y="228.96001"
                  style="stroke:#000000;stroke-width:0.8"
-                 id="use856" />
+                 id="use1138" />
             </g>
           </g>
           <g
              id="text_3">
             <text
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:normal;font-family:'Times New Roman', serif"
-               transform="translate(231.87301,246.3475)"
-               id="text861">cubic</text>
-            <text
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:normal;font-family:'Times New Roman', serif"
-               transform="translate(229.64176,267.29062)"
-               id="text863">spline</text>
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:normal;font-family:'Times New Roman', serif;text-anchor:middle"
+               x="184.53835"
+               y="246.3475"
+               id="text1143">4</text>
           </g>
         </g>
         <g
@@ -177,25 +168,22 @@
           <g
              id="line2d_4">
             <g
-               id="g869">
+               id="g1149">
               <use
-                 xlink:href="#m01cc84a039"
-                 x="321.16562"
+                 xlink:href="#m950798b1b3"
+                 x="235.26562"
                  y="228.96001"
                  style="stroke:#000000;stroke-width:0.8"
-                 id="use867" />
+                 id="use1147" />
             </g>
           </g>
           <g
              id="text_4">
             <text
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:normal;font-family:'Times New Roman', serif"
-               transform="translate(292.84844,246.3475)"
-               id="text872">nearest</text>
-            <text
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:normal;font-family:'Times New Roman', serif"
-               transform="translate(297.84062,267.29062)"
-               id="text874">interp</text>
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:normal;font-family:'Times New Roman', serif;text-anchor:middle"
+               x="235.26562"
+               y="246.3475"
+               id="text1152">5</text>
           </g>
         </g>
         <g
@@ -203,25 +191,22 @@
           <g
              id="line2d_5">
             <g
-               id="g880">
+               id="g1158">
               <use
-                 xlink:href="#m01cc84a039"
-                 x="388.802"
+                 xlink:href="#m950798b1b3"
+                 x="285.99289"
                  y="228.96001"
                  style="stroke:#000000;stroke-width:0.8"
-                 id="use878" />
+                 id="use1156" />
             </g>
           </g>
           <g
              id="text_5">
             <text
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:normal;font-family:'Times New Roman', serif"
-               transform="translate(366.03793,246.3475)"
-               id="text883">linear</text>
-            <text
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:normal;font-family:'Times New Roman', serif"
-               transform="translate(365.47699,267.29062)"
-               id="text885">interp</text>
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:normal;font-family:'Times New Roman', serif;text-anchor:middle"
+               x="285.99289"
+               y="246.3475"
+               id="text1161">6</text>
           </g>
         </g>
         <g
@@ -229,25 +214,22 @@
           <g
              id="line2d_6">
             <g
-               id="g891">
+               id="g1167">
               <use
-                 xlink:href="#m01cc84a039"
-                 x="456.43835"
+                 xlink:href="#m950798b1b3"
+                 x="336.72018"
                  y="228.96001"
                  style="stroke:#000000;stroke-width:0.8"
-                 id="use889" />
+                 id="use1165" />
             </g>
           </g>
           <g
              id="text_6">
             <text
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:normal;font-family:'Times New Roman', serif"
-               transform="translate(434.7821,246.3475)"
-               id="text894">cubic</text>
-            <text
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:normal;font-family:'Times New Roman', serif"
-               transform="translate(433.11335,267.29062)"
-               id="text896">interp</text>
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:normal;font-family:'Times New Roman', serif;text-anchor:middle"
+               x="336.72018"
+               y="246.3475"
+               id="text1170">7</text>
           </g>
         </g>
         <g
@@ -255,26 +237,31 @@
           <g
              id="line2d_7">
             <g
-               id="g902">
+               id="g1176">
               <use
-                 xlink:href="#m01cc84a039"
-                 x="524.07471"
+                 xlink:href="#m950798b1b3"
+                 x="387.44745"
                  y="228.96001"
                  style="stroke:#000000;stroke-width:0.8"
-                 id="use900" />
+                 id="use1174" />
             </g>
           </g>
           <g
              id="text_7">
             <text
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:normal;font-family:'Times New Roman', serif"
-               transform="translate(512.41534,246.3475)"
-               id="text905">rbf</text>
-            <text
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:normal;font-family:'Times New Roman', serif"
-               transform="translate(514.07472,267.29062)"
-               id="text907">gp</text>
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:normal;font-family:'Times New Roman', serif;text-anchor:middle"
+               x="387.44745"
+               y="246.3475"
+               id="text1179">8</text>
           </g>
+        </g>
+        <g
+           id="text_8">
+          <text
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:normal;font-family:'Times New Roman', serif;text-anchor:middle"
+             x="235.26562"
+             y="268.51312"
+             id="text1183">window size</text>
         </g>
       </g>
       <g
@@ -284,40 +271,29 @@
           <g
              id="line2d_8">
             <defs
-               id="defs913">
+               id="defs1188">
               <path
-                 id="mb074a9e5ed"
-                 d="M 0,0 H 2"
-                 style="stroke:#0000ff;stroke-width:0.6" />
+                 id="m04d781702d"
+                 d="M 0,0 H 3.5"
+                 style="stroke:#000000;stroke-width:0.8" />
             </defs>
             <g
-               id="g917">
+               id="g1192">
               <use
-                 xlink:href="#mb074a9e5ed"
-                 x="97.965622"
-                 y="192.65703"
-                 style="fill:#0000ff;stroke:#0000ff;stroke-width:0.6"
-                 id="use915" />
+                 xlink:href="#m04d781702d"
+                 x="67.865623"
+                 y="182.13098"
+                 style="stroke:#000000;stroke-width:0.8"
+                 id="use1190" />
             </g>
           </g>
           <g
-             id="text_8">
-            <!-- $\mathdefault{3\times10^{-1}}$ -->
-            <g
-               style="fill:#0000ff"
-               transform="translate(29.365625,201.51797)"
-               id="g926">
-              <text
-                 id="text924"><tspan
-                   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:normal;font-family:'Times New Roman'"
-                   x="0 13.896484 29.072266 39.072266"
-                   y="-0.51656252"
-                   id="tspan920">3×10</tspan><tspan
-                   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;line-height:normal;font-family:'Times New Roman'"
-                   x="49.372829 57.268337"
-                   y="-12.539062"
-                   id="tspan922">−1</tspan></text>
-            </g>
+             id="text_9">
+            <text
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:normal;font-family:'Times New Roman', serif;text-anchor:end;fill:#0000ff"
+               x="64.365623"
+               y="189.07472"
+               id="text1195">0.15</text>
           </g>
         </g>
         <g
@@ -325,33 +301,22 @@
           <g
              id="line2d_9">
             <g
-               id="g932">
+               id="g1201">
               <use
-                 xlink:href="#mb074a9e5ed"
-                 x="97.965622"
-                 y="131.41588"
-                 style="fill:#0000ff;stroke:#0000ff;stroke-width:0.6"
-                 id="use930" />
+                 xlink:href="#m04d781702d"
+                 x="67.865623"
+                 y="102.00577"
+                 style="stroke:#000000;stroke-width:0.8"
+                 id="use1199" />
             </g>
           </g>
           <g
-             id="text_9">
-            <!-- $\mathdefault{4\times10^{-1}}$ -->
-            <g
-               style="fill:#0000ff"
-               transform="translate(29.365625,140.27682)"
-               id="g941">
-              <text
-                 id="text939"><tspan
-                   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:normal;font-family:'Times New Roman'"
-                   x="0 13.896484 29.072266 39.072266"
-                   y="-0.51656252"
-                   id="tspan935">4×10</tspan><tspan
-                   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;line-height:normal;font-family:'Times New Roman'"
-                   x="49.372829 57.268337"
-                   y="-12.539062"
-                   id="tspan937">−1</tspan></text>
-            </g>
+             id="text_10">
+            <text
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:normal;font-family:'Times New Roman', serif;text-anchor:end;fill:#0000ff"
+               x="64.365623"
+               y="108.94952"
+               id="text1204">0.16</text>
           </g>
         </g>
         <g
@@ -359,110 +324,69 @@
           <g
              id="line2d_10">
             <g
-               id="g947">
+               id="g1210">
               <use
-                 xlink:href="#mb074a9e5ed"
-                 x="97.965622"
-                 y="83.913551"
-                 style="fill:#0000ff;stroke:#0000ff;stroke-width:0.6"
-                 id="use945" />
-            </g>
-          </g>
-        </g>
-        <g
-           id="ytick_4">
-          <g
-             id="line2d_11">
-            <g
-               id="g953">
-              <use
-                 xlink:href="#mb074a9e5ed"
-                 x="97.965622"
-                 y="45.101318"
-                 style="fill:#0000ff;stroke:#0000ff;stroke-width:0.6"
-                 id="use951" />
+                 xlink:href="#m04d781702d"
+                 x="67.865623"
+                 y="21.880564"
+                 style="stroke:#000000;stroke-width:0.8"
+                 id="use1208" />
             </g>
           </g>
           <g
-             id="text_10">
-            <!-- $\mathdefault{6\times10^{-1}}$ -->
-            <g
-               style="fill:#0000ff"
-               transform="translate(29.365625,53.962255)"
-               id="g962">
-              <text
-                 id="text960"><tspan
-                   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:normal;font-family:'Times New Roman'"
-                   x="0 13.896484 29.072266 39.072266"
-                   y="-0.51656252"
-                   id="tspan956">6×10</tspan><tspan
-                   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;line-height:normal;font-family:'Times New Roman'"
-                   x="49.372829 57.268337"
-                   y="-12.539062"
-                   id="tspan958">−1</tspan></text>
-            </g>
+             id="text_11">
+            <text
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:normal;font-family:'Times New Roman', serif;text-anchor:end;fill:#0000ff"
+               x="64.365623"
+               y="28.824314"
+               id="text1213">0.17</text>
           </g>
         </g>
         <g
-           id="ytick_5">
-          <g
-             id="line2d_12">
-            <g
-               id="g968">
-              <use
-                 xlink:href="#mb074a9e5ed"
-                 x="97.965622"
-                 y="12.286044"
-                 style="fill:#0000ff;stroke:#0000ff;stroke-width:0.6"
-                 id="use966" />
-            </g>
-          </g>
-        </g>
-        <g
-           id="text_11">
+           id="text_12">
           <text
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:normal;font-family:'Times New Roman', serif;text-anchor:middle;fill:#0000ff"
              x="21.0875"
              y="118.08"
              transform="rotate(-90,21.0875,118.08)"
-             id="text972">MAE (ns)</text>
+             id="text1217">LPIPS (arithmetic mean)</text>
         </g>
       </g>
       <g
-         id="line2d_13">
+         id="line2d_11">
         <path
-           d="m 118.25653,207.26632 67.63637,-27.07601 67.63636,-1.25835 67.63636,8.31263 67.63637,11.73326 67.63636,-181.69785 67.63637,201.6"
-           clip-path="url(#pb0243ca83e)"
+           d="m 83.083807,17.28 50.727273,159.06375 50.72727,18.26567 50.72727,11.90455 50.72728,12.36603 50.72727,-8.39871 50.72727,-5.60029"
+           clip-path="url(#pe35d8a9372)"
            style="fill:none;stroke:#0000ff;stroke-width:1.5;stroke-linecap:square"
-           id="path976" />
+           id="path1221" />
       </g>
       <g
          id="patch_3">
         <path
-           d="M 97.965625,228.96 V 7.2"
+           d="M 67.865625,228.96 V 7.2"
            style="fill:none;stroke:#000000;stroke-width:0.8;stroke-linecap:square;stroke-linejoin:miter"
-           id="path979" />
+           id="path1224" />
       </g>
       <g
          id="patch_4">
         <path
-           d="M 544.36563,228.96 V 7.2"
+           d="M 402.66562,228.96 V 7.2"
            style="fill:none;stroke:#000000;stroke-width:0.8;stroke-linecap:square;stroke-linejoin:miter"
-           id="path982" />
+           id="path1227" />
       </g>
       <g
          id="patch_5">
         <path
-           d="M 97.965625,228.96 H 544.36563"
+           d="M 67.865625,228.96 H 402.66562"
            style="fill:none;stroke:#000000;stroke-width:0.8;stroke-linecap:square;stroke-linejoin:miter"
-           id="path985" />
+           id="path1230" />
       </g>
       <g
          id="patch_6">
         <path
-           d="M 97.965625,7.2 H 544.36563"
+           d="M 67.865625,7.2 H 402.66562"
            style="fill:none;stroke:#000000;stroke-width:0.8;stroke-linecap:square;stroke-linejoin:miter"
-           id="path988" />
+           id="path1233" />
       </g>
     </g>
     <g
@@ -470,44 +394,79 @@
       <g
          id="matplotlib.axis_3">
         <g
-           id="ytick_6">
+           id="ytick_4">
           <g
-             id="line2d_14">
+             id="line2d_12">
             <defs
-               id="defs993">
+               id="defs1238">
               <path
-                 id="m7c0d10d752"
-                 d="M 0,0 H -2"
-                 style="stroke:#ff0000;stroke-width:0.6" />
+                 id="ma7a9703e19"
+                 d="M 0,0 H -3.5"
+                 style="stroke:#000000;stroke-width:0.8" />
             </defs>
             <g
-               id="g997">
+               id="g1242">
               <use
-                 xlink:href="#m7c0d10d752"
-                 x="544.3656"
-                 y="151.60028"
-                 style="fill:#ff0000;stroke:#ff0000;stroke-width:0.6"
-                 id="use995" />
+                 xlink:href="#ma7a9703e19"
+                 x="402.66562"
+                 y="193.15404"
+                 style="stroke:#000000;stroke-width:0.8"
+                 id="use1240" />
             </g>
           </g>
           <g
-             id="text_12">
-            <!-- $\mathdefault{2\times10^{-1}}$ -->
+             id="text_13">
+            <text
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:normal;font-family:'Times New Roman', serif;text-anchor:start;fill:#ff0000"
+               x="406.16562"
+               y="200.09779"
+               id="text1245">0.1300</text>
+          </g>
+        </g>
+        <g
+           id="ytick_5">
+          <g
+             id="line2d_13">
             <g
-               style="fill:#ff0000"
-               transform="translate(547.76562,160.46122)"
-               id="g1006">
-              <text
-                 id="text1004"><tspan
-                   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:normal;font-family:'Times New Roman'"
-                   x="0 13.896484 29.072266 39.072266"
-                   y="-0.51656252"
-                   id="tspan1000">2×10</tspan><tspan
-                   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;line-height:normal;font-family:'Times New Roman'"
-                   x="49.372829 57.268337"
-                   y="-12.539062"
-                   id="tspan1002">−1</tspan></text>
+               id="g1251">
+              <use
+                 xlink:href="#ma7a9703e19"
+                 x="402.66562"
+                 y="144.63774"
+                 style="stroke:#000000;stroke-width:0.8"
+                 id="use1249" />
             </g>
+          </g>
+          <g
+             id="text_14">
+            <text
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:normal;font-family:'Times New Roman', serif;text-anchor:start;fill:#ff0000"
+               x="406.16562"
+               y="151.58148"
+               id="text1254">0.1325</text>
+          </g>
+        </g>
+        <g
+           id="ytick_6">
+          <g
+             id="line2d_14">
+            <g
+               id="g1260">
+              <use
+                 xlink:href="#ma7a9703e19"
+                 x="402.66562"
+                 y="96.121429"
+                 style="stroke:#000000;stroke-width:0.8"
+                 id="use1258" />
+            </g>
+          </g>
+          <g
+             id="text_15">
+            <text
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:normal;font-family:'Times New Roman', serif;text-anchor:start;fill:#ff0000"
+               x="406.16562"
+               y="103.06518"
+               id="text1263">0.1350</text>
           </g>
         </g>
         <g
@@ -515,93 +474,82 @@
           <g
              id="line2d_15">
             <g
-               id="g1012">
+               id="g1269">
               <use
-                 xlink:href="#m7c0d10d752"
-                 x="544.3656"
-                 y="63.081421"
-                 style="fill:#ff0000;stroke:#ff0000;stroke-width:0.6"
-                 id="use1010" />
+                 xlink:href="#ma7a9703e19"
+                 x="402.66562"
+                 y="47.605125"
+                 style="stroke:#000000;stroke-width:0.8"
+                 id="use1267" />
             </g>
           </g>
           <g
-             id="text_13">
-            <!-- $\mathdefault{3\times10^{-1}}$ -->
-            <g
-               style="fill:#ff0000"
-               transform="translate(547.76562,71.942357)"
-               id="g1021">
-              <text
-                 id="text1019"><tspan
-                   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:normal;font-family:'Times New Roman'"
-                   x="0 13.896484 29.072266 39.072266"
-                   y="-0.51656252"
-                   id="tspan1015">3×10</tspan><tspan
-                   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;line-height:normal;font-family:'Times New Roman'"
-                   x="49.372829 57.268337"
-                   y="-12.539062"
-                   id="tspan1017">−1</tspan></text>
-            </g>
+             id="text_16">
+            <text
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:normal;font-family:'Times New Roman', serif;text-anchor:start;fill:#ff0000"
+               x="406.16562"
+               y="54.548874"
+               id="text1272">0.1375</text>
           </g>
         </g>
         <g
-           id="text_14">
+           id="text_17">
           <text
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:normal;font-family:'Times New Roman', serif;text-anchor:middle;fill:#ff0000"
-             x="630.85315"
+             x="479.05313"
              y="118.08"
-             transform="rotate(-90,630.85312,118.08)"
-             id="text1025">LPIPS (a.u.)</text>
+             transform="rotate(-90,479.05313,118.08)"
+             id="text1276">LPIPS (geometric mean)</text>
         </g>
       </g>
       <g
          id="line2d_16">
         <path
-           d="m 118.25653,216.47752 67.63637,-12.60351 67.63636,-5.35671 67.63636,18.64203 67.63637,1.72067 67.63636,-201.6 67.63637,125.74893"
-           clip-path="url(#pb0243ca83e)"
+           d="M 83.083807,85.53633 133.81108,218.88 184.53835,165.29762 235.26562,120.26029 285.9929,98.249118 336.72017,52.909855 387.44744,17.28"
+           clip-path="url(#pe35d8a9372)"
            style="fill:none;stroke:#ff0000;stroke-width:1.5;stroke-linecap:square"
-           id="path1029" />
+           id="path1280" />
       </g>
       <g
          id="patch_7">
         <path
-           d="M 97.965625,228.96 V 7.2"
+           d="M 67.865625,228.96 V 7.2"
            style="fill:none;stroke:#000000;stroke-width:0.8;stroke-linecap:square;stroke-linejoin:miter"
-           id="path1032" />
+           id="path1283" />
       </g>
       <g
          id="patch_8">
         <path
-           d="M 544.36563,228.96 V 7.2"
+           d="M 402.66562,228.96 V 7.2"
            style="fill:none;stroke:#000000;stroke-width:0.8;stroke-linecap:square;stroke-linejoin:miter"
-           id="path1035" />
+           id="path1286" />
       </g>
       <g
          id="patch_9">
         <path
-           d="M 97.965625,228.96 H 544.36563"
+           d="M 67.865625,228.96 H 402.66562"
            style="fill:none;stroke:#000000;stroke-width:0.8;stroke-linecap:square;stroke-linejoin:miter"
-           id="path1038" />
+           id="path1289" />
       </g>
       <g
          id="patch_10">
         <path
-           d="M 97.965625,7.2 H 544.36563"
+           d="M 67.865625,7.2 H 402.66562"
            style="fill:none;stroke:#000000;stroke-width:0.8;stroke-linecap:square;stroke-linejoin:miter"
-           id="path1041" />
+           id="path1292" />
       </g>
     </g>
   </g>
   <defs
-     id="defs1049">
+     id="defs1300">
     <clipPath
-       id="pb0243ca83e">
+       id="pe35d8a9372">
       <rect
-         x="97.965622"
+         x="67.865623"
          y="7.1999998"
-         width="446.39999"
+         width="334.79999"
          height="221.75999"
-         id="rect1046" />
+         id="rect1297" />
     </clipPath>
   </defs>
 </svg>

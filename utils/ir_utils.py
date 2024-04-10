@@ -406,38 +406,41 @@ class SiSIFUS(object):
         encoder = eval('cnn_utils.Architectures(self.global_patch_size).{}()'.format(model_v))
         encoder.compile(loss='mae',
                         optimizer=tf.keras.optimizers.Adam(learning_rate=3e-4))
-        # history = encoder.fit(x=x_train, y = y_train, epochs = epochs, shuffle=True, batch_size=100)
-        
-        # # Make predictions
-        # prediction = encoder.predict(x_test,batch_size=1000)
-        # prediction = prediction.reshape(hr_int_patches.shape[0],hr_int_patches.shape[1])
-        # prediction[prediction<0] = 0
 
-        # self.global_prior=prediction.copy()
-        # return prediction, history.history
-        
-        run_matrix = np.zeros((512,512,151))
-        class TestCallback(tf.keras.callbacks.Callback):
-            def __init__(self, test_dataset):
-                super().__init__()
-                self.test_dataset = test_dataset
-            def on_epoch_begin(self,epoch,logs=None):
-                prediction = self.model.predict(x_test,batch_size=1000)
-                prediction = prediction.reshape(hr_int_patches.shape[0],hr_int_patches.shape[1])
-                prediction[prediction<0] = 0
-                run_matrix[6:-6,6:-6,epoch]=prediction
-        
-        history = encoder.fit(x=x_train, y = y_train, epochs = epochs, shuffle=True, batch_size=100,callbacks=[TestCallback(x_test)])
+        history = encoder.fit(x=x_train, y = y_train, epochs = epochs, shuffle=True, batch_size=100)
         
         # Make predictions
         prediction = encoder.predict(x_test,batch_size=1000)
         prediction = prediction.reshape(hr_int_patches.shape[0],hr_int_patches.shape[1])
         prediction[prediction<0] = 0
-    
-        np.save(r'E:\OneDrive - University of Glasgow\mega-FLIM\FLIPPER\gp_frames.npy',run_matrix)
-        
+
         self.global_prior=prediction.copy()
-        return prediction, None#history.history
+        return prediction, history.history
+        
+        #### Tracking the training process ########################################
+        # run_matrix = np.zeros((512,512,151))
+        # class TestCallback(tf.keras.callbacks.Callback):
+        #     def __init__(self, test_dataset):
+        #         super().__init__()
+        #         self.test_dataset = test_dataset
+        #     def on_epoch_begin(self,epoch,logs=None):
+        #         prediction = self.model.predict(x_test,batch_size=1000)
+        #         prediction = prediction.reshape(hr_int_patches.shape[0],hr_int_patches.shape[1])
+        #         prediction[prediction<0] = 0
+        #         run_matrix[6:-6,6:-6,epoch]=prediction
+        
+        # history = encoder.fit(x=x_train, y = y_train, epochs = epochs, shuffle=True, batch_size=100,callbacks=[TestCallback(x_test)])
+        
+        # # Make predictions
+        # prediction = encoder.predict(x_test,batch_size=1000)
+        # prediction = prediction.reshape(hr_int_patches.shape[0],hr_int_patches.shape[1])
+        # prediction[prediction<0] = 0
+    
+        # np.save(r'E:\OneDrive - University of Glasgow\mega-FLIM\FLIPPER\gp_frames.npy',run_matrix)
+        
+        # self.global_prior=prediction.copy()
+        # return prediction, None#history.history
+        ############################################################################
        
     def admm_loop(self,local_prior,global_prior, ADMM_iter = 20):
         """
