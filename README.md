@@ -1,5 +1,6 @@
 # SiSIFUS
 ### Single-sample image-fusion upsampling of fluorescence lifetime images
+*[Published in Science Advances](https://www.science.org/doi/10.1126/sciadv.adn0139) (2024)*
 
 We present single-sample image-fusion upsampling, a training-set-free computational single-image super-resolution method.
 
