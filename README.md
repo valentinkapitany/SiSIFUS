@@ -1,3 +1,6 @@
-### Website for 'single-sample image-fusion upsampling' by Kapitany et al.
+### 'Single-sample image-fusion upsampling' 
+Valentin Kapitany, Areeba Fatima, Vytautas Zickus, Jamie Whitelaw, Ewan McGhee, Robert Insall, Laura Machesky and Daniele Faccio
+Science Advances (2024)
+https://doi.org/10.1126/sciadv.adn0139
 
-Adapted from https://github.com/eliahuhorwitz/Academic-project-page-template.
+*Site adapted from https://github.com/eliahuhorwitz/Academic-project-page-template.*
