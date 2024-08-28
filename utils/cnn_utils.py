@@ -11,6 +11,9 @@ import tensorflow as tf
 # import torch.nn.functional as F
 import random
 import numpy as np
+import time
+import keras.backend as K
+from tqdm import tqdm
 
 #%%
 class Architectures(object):
@@ -44,6 +47,8 @@ class Architectures(object):
 
         encoder = tf.keras.models.Model(inputs = window_inp, outputs = window)
         return encoder
+    
+    
     def v7(self):
         """intensity window input, and position input. One hot encoding. Do not change"""
         
@@ -83,9 +88,4 @@ class Architectures(object):
 #         x = F.leaky_relu(self.fc3(x))
 #         return x
 
-
-    
-
-
-#%%
-
+# %%

@@ -20,8 +20,10 @@ import cv2
 import tensorflow as tf
 
 from utils import cnn_utils
-import torch
-from lpips import LPIPS
+import importlib
+importlib.reload(cnn_utils)
+# import torch
+# from lpips import LPIPS
 from matplotlib.colors import Normalize
 #%% 
 class SiSIFUS(object):
@@ -402,7 +404,7 @@ class SiSIFUS(object):
 
         y_train = lr_tau_centres.reshape(-1,1)
 
-        # Train the model
+        # # Train the model - this is the process in sisifus v1.0.0 #################
         encoder = eval('cnn_utils.Architectures(self.global_patch_size).{}()'.format(model_v))
         encoder.compile(loss='mae',
                         optimizer=tf.keras.optimizers.Adam(learning_rate=3e-4))
@@ -416,7 +418,10 @@ class SiSIFUS(object):
 
         self.global_prior=prediction.copy()
         return prediction, history.history
+        ############################################################################
         
+        
+
         #### Tracking the training process ########################################
         # run_matrix = np.zeros((512,512,151))
         # class TestCallback(tf.keras.callbacks.Callback):
@@ -605,12 +610,12 @@ class SiSIFUS(object):
         """End-to-end pipeline to create global prior, call directly after instantiating SiSIFUS on data"""
         self.data_clean()
         lr_int_patches, lr_tau_centres, hr_int_patches = self.global_data_prep(patch_size=patch_size,pad=pad)
-        global_prior, history = self.global_prior(lr_int_patches, lr_tau_centres, hr_int_patches, epochs=epochs)
-        return global_prior, history
+        global_prior, history, encoder = self.global_prior(lr_int_patches, lr_tau_centres, hr_int_patches, epochs=epochs)
+        return global_prior, history, encoder
 
 #%% Other functions
-try: loss_fn
-except: loss_fn = LPIPS(net='alex').double()
+# try: loss_fn
+# except: loss_fn = LPIPS(net='alex').double()
 
 def perceptual_loss(img0, img1):
     """https://github.com/richzhang/PerceptualSimilarity"""
